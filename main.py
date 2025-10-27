@@ -1,7 +1,8 @@
 # Argumenty przyjmujące tekst i klucz który definiuje o ile zmieniają się litery
 def Cezar(tekst: str, klucz: str) -> str:
     rezultat = ""
-    #Ogranicza wartość klucza
+    #Ogranicza wartość klucza do zakresu 0–25, aby nawet 
+    #duże przesunięcia (np. 52, 78) dawały poprawny wynik w 26-literowym alfabecie.
     klucz = klucz % 26
     # Przechodzimy po każdym znaku w tekście
     for litera in tekst:
